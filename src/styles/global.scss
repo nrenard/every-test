@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body, input {
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}

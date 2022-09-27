@@ -1,0 +1,11 @@
+@import '../../../../styles/mixins.scss';
+
+.bottom-form {
+  margin-top: 20px;
+
+  @include simple-flex;
+
+  button {
+    margin-left: 10px;
+  }
+}

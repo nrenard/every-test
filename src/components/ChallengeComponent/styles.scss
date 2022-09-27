@@ -1,0 +1,11 @@
+.challenge-component {
+  height: 80vh;
+  width: 100%;
+  padding: 20px;
+
+  .board-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 85%;
+  }
+}

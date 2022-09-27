@@ -1,0 +1,23 @@
+.button {
+  padding: 15px 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  &.blue {
+    background-color: var(--add-button);
+  }
+
+  &.green {
+    background-color: var(--next-arrow);
+  }
+
+  &.red {
+    background-color: var(--back-arrow);
+  }
+}

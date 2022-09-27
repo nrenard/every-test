@@ -2,7 +2,7 @@
   padding: 15px 10px;
   border: none;
   border-radius: 5px;
-  color: #fff;
+  color: var(--white);
 
   &:disabled {
     pointer-events: none;

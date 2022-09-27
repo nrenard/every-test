@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 
-import dashboard from './dashboard';
+import board from './board';
 
-const listContainers = [dashboard];
+const listContainers = [board];
 
 export default function containers(WrappedComponent: React.FC): React.FC {
   const WithContainers = (props: any) => {

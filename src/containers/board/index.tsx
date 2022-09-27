@@ -2,9 +2,7 @@
 import React, { useState, useCallback, useContext, memo } from 'react';
 
 import initialActions from './actions';
-
 import { IActions, IState } from './dtos';
-
 import { initialState } from './constants';
 
 interface IData {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { IChangeStatus, StatusEnum } from '../../containers/dashboard/dtos'
+import { IChangeStatus, StatusEnum } from '../../containers/board/dtos'
 
 import { Button } from '../Button'
 

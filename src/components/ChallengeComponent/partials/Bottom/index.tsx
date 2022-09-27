@@ -1,6 +1,6 @@
 import React, { memo, useState } from 'react';
 
-import { useBoard } from '../../../../containers/dashboard';
+import { useBoard } from '../../../../containers/board';
 
 import { Button } from '../../../Button';
 import Input from '../../../Input';

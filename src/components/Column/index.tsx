@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { useBoard } from '../../containers/dashboard'
-import { StatusEnum, IChangeStatus } from '../../containers/dashboard/dtos'
+import { useBoard } from '../../containers/board'
+import { StatusEnum, IChangeStatus } from '../../containers/board/dtos'
 
 import { ColumnItem } from '../ColumnItem'
 
@@ -17,16 +17,16 @@ const mapColumnName = {
   [StatusEnum.DONE]: 'Done',
 }
 
-const mapNextStatus = {
-  [StatusEnum.TO_DO]: StatusEnum.IN_PROGRESS,
-  [StatusEnum.IN_PROGRESS]: StatusEnum.DONE,
-  [StatusEnum.DONE]: StatusEnum.DONE
-}
-
 const mapPreviousStatus = {
   [StatusEnum.TO_DO]: StatusEnum.TO_DO,
   [StatusEnum.IN_PROGRESS]: StatusEnum.TO_DO,
   [StatusEnum.DONE]: StatusEnum.IN_PROGRESS
+}
+
+const mapNextStatus = {
+  [StatusEnum.TO_DO]: StatusEnum.IN_PROGRESS,
+  [StatusEnum.IN_PROGRESS]: StatusEnum.DONE,
+  [StatusEnum.DONE]: StatusEnum.DONE
 }
 
 export const Column: React.FC<IProps> = ({
@@ -34,9 +34,7 @@ export const Column: React.FC<IProps> = ({
 }) => {
   const { data, actions } = useBoard()
 
-
   const titleColumn = mapColumnName[status]
-
   const list = data[status];
 
   const changeStatus = (params: IChangeStatus) => actions.changeStatus(params)

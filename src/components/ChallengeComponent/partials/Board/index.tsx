@@ -1,5 +1,6 @@
 import React from 'react';
-import { StatusEnum } from '../../../../containers/dashboard/dtos';
+
+import { StatusEnum } from '../../../../containers/board/dtos';
 
 import { Column } from '../../../Column';
 

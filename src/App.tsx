@@ -1,5 +1,7 @@
 import React from 'react'
 
+import withContainer from './containers';
+
 import { ChallengeComponent } from './components'
 
 import './app.scss'
@@ -29,4 +31,4 @@ function App() {
   )
 }
 
-export default App
+export default withContainer(App)

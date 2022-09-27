@@ -1,17 +1,23 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
+
+import { useBoard } from '../../../../containers/dashboard';
 
 import { Button } from '../../../Button';
 import Input from '../../../Input';
 
 import './styles.scss'
 
-
-export const Bottom: React.FC = () => {
+const Bottom: React.FC = () => {
   const [newTask, setNewTask] = useState("");
+
+  const { actions } = useBoard();
 
   const onSumit = (e: any) => {
     e.preventDefault();
-    alert(`newTask: ${newTask}`);
+
+    if (newTask.trim() === '') return;
+
+    actions.addNew(newTask);
     setNewTask('');
   }
 
@@ -22,3 +28,5 @@ export const Bottom: React.FC = () => {
     </form>
   )
 }
+
+export default memo(Bottom)

@@ -1,2 +1,2 @@
 export * from './Board'
-export * from './Bottom'
+export { default as Bottom } from './Bottom'

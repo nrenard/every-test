@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { StatusEnum } from '../../../../containers/board/dtos';
 
@@ -7,7 +7,7 @@ import { Column } from '../../../Column';
 import './styles.scss'
 
 
-export const Board: React.FC = () => {
+const Board: React.FC = () => {
   return (
     <div className="board-wrapper">
       <Column status={StatusEnum.TO_DO} />
@@ -16,3 +16,5 @@ export const Board: React.FC = () => {
     </div>
   )
 }
+
+export default memo(Board)
